@@ -16,7 +16,86 @@
 
 <body>
 
+  <div class="navbar-fixed">
+    <nav class="indigo">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#home" class="brand-logo">Voyager</a>
+          <a href="#" data-activates="mobile-nav" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#search">Search</a>
+            </li>
+            <li>
+              <a href="#popular">Popular Places</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <ul class="side-nav" id="mobile-nav">
+    <li>
+      <a href="#home">Home</a>
+    </li>
+    <li>
+      <a href="#search">Search</a>
+    </li>
+    <li>
+      <a href="#popular">Popular Places</a>
+    </li>
+    <li>
+      <a href="#gallery">Gallery</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+
+
+  <!-- section: Slider -->
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/voyager1.jpg" alt="">
+        <div class="caption center-align">
+          <h2>Take Your Dream Vacation</h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Discover the remarkable places and making the world a better place – for now and future generations !</h5>
+          <a href="#" class="btn btn-large indigo">Learn More</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/voyager2.jpg" alt="">
+        <div class="caption left-align">
+          <h2>We Work With All Budgets</h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Choosing a travel destination shouldn't cost a fortune.</h5>
+          <a href="#" class="btn btn-large indigo">Learn More</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/voyager3.jpg" alt="">
+        <div class="caption right-align">
+          <h2>Group & Individual Getaways</h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">To help travelers find the most convenient and environmentally friendly way to travel !</h5>
+          <a href="#" class="btn btn-large indigo">Learn More</a>
+        </div>
+      </li>
+    </ul>
+  </section>
   
+
+
 
 
 
@@ -30,7 +109,19 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
     $(document).ready(function () {
-      // Custom JS & jQuery here
+      // Init side nav
+      $(`.button-collapse`).sideNav();
+
+
+      //Init slider
+      $(`.slider`).slider({
+        indicators: false,
+        height: 500,
+        transition: 500,
+        interval: 7000
+      });
+
+
       
     });
   </script>
